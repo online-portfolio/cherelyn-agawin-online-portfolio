@@ -25,14 +25,16 @@ export function PixelPointer() {
       }
     };
     const onLeave = () => pointer.classList.remove("is-visible");
+    const onPointerOut = (event: PointerEvent) => {
+      if (!event.relatedTarget) onLeave();
+    };
 
     window.addEventListener("pointermove", onMove, { passive: true });
-    document.addEventListener("pointerout", (event) => {
-      if (!event.relatedTarget) onLeave();
-    });
+    document.addEventListener("pointerout", onPointerOut);
     window.addEventListener("blur", onLeave);
     return () => {
       window.removeEventListener("pointermove", onMove);
+      document.removeEventListener("pointerout", onPointerOut);
       window.removeEventListener("blur", onLeave);
     };
   }, []);
