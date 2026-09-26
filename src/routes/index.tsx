@@ -150,7 +150,7 @@ function Portfolio() {
                   key={area}
                   className={cn(
                     "rounded-sm px-3 py-1.5 text-xs font-medium",
-                    toneSoft[(["sky", "sage", "peach", "lavender"] as Tone[])[i % 4]],
+                    toneSoft[(["sky", "sage", "peach", "lavender"] as Tone[])[i % 4]!],
                   )}
                 >
                   {area}
@@ -238,7 +238,7 @@ function Portfolio() {
           />
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {SERVICES.map((service) => {
-              const Icon = SERVICE_ICONS[service.icon];
+              const Icon = SERVICE_ICONS[service.icon]!;
               return (
                 <article key={service.title} className="pixel-card pixel-lift p-5">
                   <span
@@ -270,7 +270,7 @@ function Portfolio() {
                     key={skill}
                     className={cn(
                       "rounded-sm px-3 py-1.5 text-sm font-medium",
-                      toneSoft[(["sage", "sky", "lavender", "peach"] as Tone[])[i % 4]],
+                      toneSoft[(["sage", "sky", "lavender", "peach"] as Tone[])[i % 4]!],
                     )}
                   >
                     {skill}

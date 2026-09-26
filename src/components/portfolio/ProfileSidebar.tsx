@@ -56,7 +56,7 @@ function NavList({ active, onNavigate }: { active: string; onNavigate?: () => vo
   return (
     <nav className="flex flex-col gap-1">
       {NAV_ITEMS.map((item) => {
-        const Icon = ICONS[item.icon];
+        const Icon = ICONS[item.icon]!;
         const isActive = active === item.id;
         return (
           <a
