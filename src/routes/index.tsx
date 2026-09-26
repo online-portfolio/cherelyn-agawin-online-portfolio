@@ -82,10 +82,10 @@ function SectionHeading({
 
 function Portfolio() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background lg:pl-72">
       <ProfileSidebar />
 
-      <main className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-8 sm:py-12 lg:ml-72 lg:max-w-none lg:px-12">
+      <main className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-8 sm:py-12 lg:max-w-6xl lg:px-12">
         {/* HERO */}
         <section id="home" className="scroll-mt-24">
           <div className="pixel-card pixel-grid relative overflow-hidden p-6 sm:p-10">
