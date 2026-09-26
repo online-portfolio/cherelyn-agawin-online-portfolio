@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 
 import { ProfileSidebar } from "@/components/portfolio/ProfileSidebar";
-import { PixelPointer } from "@/components/portfolio/PixelPointer";
 import aboutImage from "@/assets/portrait-about.jpg";
 import {
   ACHIEVEMENTS,
@@ -84,7 +83,6 @@ function SectionHeading({
 function Portfolio() {
   return (
     <div className="min-h-screen bg-background lg:pl-72">
-      <PixelPointer />
       <ProfileSidebar />
 
       <main className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-8 sm:py-12 lg:max-w-none lg:px-10 xl:max-w-6xl">
