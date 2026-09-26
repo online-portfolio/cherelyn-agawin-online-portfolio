@@ -154,6 +154,7 @@
 }
 
 @utility pixel-card {
+  position: relative;
   background-color: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -218,4 +219,46 @@
 
 @utility pixel-blink {
   animation: pixel-blink 1.6s steps(2, end) infinite;
+}
+
+/* Fine-pointer-only pixel feedback, layered without blocking clicks or text. */
+.pixel-pointer { display: none; }
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .pixel-pointer {
+    position: fixed;
+    top: -18px;
+    left: -18px;
+    z-index: 100;
+    width: 36px;
+    height: 36px;
+    display: block;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 150ms ease;
+  }
+
+  .pixel-pointer.is-visible { opacity: 1; }
+  .pixel-pointer span { position: absolute; width: 5px; height: 5px; }
+  .pixel-pointer span:nth-child(1) { top: 0; left: 15px; background: var(--sky-foreground); }
+  .pixel-pointer span:nth-child(2) { top: 15px; right: 0; background: var(--sage-foreground); }
+  .pixel-pointer span:nth-child(3) { bottom: 0; left: 15px; background: var(--peach-foreground); }
+  .pixel-pointer span:nth-child(4) { top: 15px; left: 0; background: var(--lavender-foreground); }
+
+  .pixel-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background: conic-gradient(from 90deg, var(--sky) 25%, transparent 0 50%, var(--sage) 0 75%, transparent 0) 0 0 / 20px 20px;
+    mask-image: radial-gradient(circle 100px at var(--pointer-x, 50%) var(--pointer-y, 50%), #000 5%, transparent 100%);
+    transition: opacity 220ms steps(4, end);
+  }
+
+  .pixel-card:hover::after { opacity: 0.65; }
+
+  a:hover .pixel-dot,
+  button:hover .pixel-dot { animation: pixel-blink 600ms steps(2, end) infinite; }
 }
