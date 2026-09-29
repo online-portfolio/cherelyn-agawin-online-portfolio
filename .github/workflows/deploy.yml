@@ -16,7 +16,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
 
     steps:
@@ -35,24 +39,14 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Prepare site
-        run: |
-          if [ -d ".output/public" ]; then
-            cp -r .output/public _site
-          elif [ -d "dist" ]; then
-            cp -r dist _site
-          else
-            echo "No build output found"
-            exit 1
-          fi
-
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload Pages artifact
+      - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: .output/public
 
       - name: Deploy
+        id: deployment
         uses: actions/deploy-pages@v4
