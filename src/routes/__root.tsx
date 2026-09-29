@@ -77,35 +77,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Cherelyn Agawin — Administrative Assistant" },
-      {
-        name: "description",
-        content:
-          "Professional portfolio of Cherelyn Agawin, administrative assistant based in Lapu Lapu City, Cebu.",
-      },
+      { title: "Cherelyn Agawin | Administrative Assistant" },
+      { name: "description", content: "Professional portfolio of Cherelyn Agawin, Administrative Assistant in Lapu-Lapu City, Cebu, Philippines." },
       { name: "author", content: "Cherelyn Agawin" },
-      { property: "og:title", content: "Cherelyn Agawin — Administrative Assistant" },
-      {
-        property: "og:description",
-        content:
-          "Administrative support, lead generation, customer service and data management.",
-      },
+      { property: "og:title", content: "Cherelyn Agawin | Administrative Assistant" },
+      { property: "og:description", content: "Administrative support, lead generation, customer service, recruitment, and data management." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap",
       },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
   shellComponent: RootShell,
