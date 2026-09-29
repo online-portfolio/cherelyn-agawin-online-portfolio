@@ -367,7 +367,7 @@ function Hero() {
             <div className="profile-frame-heading"><span>Professional profile</span><span>Cebu, Philippines</span></div>
             <figure className="profile-figure">
             <img
-              src="/profile.jpg"
+              src="https://online-portfolio.github.io/cherelyn-agawin-online-portfolio/profile.jpg"
               alt="Cherelyn Agawin"
               width={900}
               height={1200}
