@@ -1,4 +1,4 @@
-﻿import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import {
   ArrowDown,
@@ -79,9 +79,9 @@ const PROFILE = {
   title: "Administrative Assistant",
   location: "Lapu-Lapu City, Cebu, Philippines",
   summary:
-    "Iâ€™m an organized and dedicated Administrative Assistant with a proven track record of providing exceptional customer service in fast-paced environments. I bring strong attention to detail and decision-making skills, and Iâ€™m comfortable managing multiple tasks at once.",
+    "I’m an organized and dedicated Administrative Assistant with a proven track record of providing exceptional customer service in fast-paced environments. I bring strong attention to detail and decision-making skills, and I’m comfortable managing multiple tasks at once.",
   approach:
-    "Iâ€™m self-motivated and work effectively both independently and as part of a team. I bring strong communication and project management skills, and take a proactive approach to identifying issues, improving processes, and supporting team objectives.",
+    "I’m self-motivated and work effectively both independently and as part of a team. I bring strong communication and project management skills, and take a proactive approach to identifying issues, improving processes, and supporting team objectives.",
 };
 
 const GMAIL_COMPOSE_URL = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(PROFILE.email)}&su=${encodeURIComponent("Professional inquiry")}`;
@@ -105,7 +105,7 @@ const SNAPSHOT = [
 
 const EXPERIENCE = [
   {
-    period: "March 2026 â€” Present",
+    period: "March 2026 — Present",
     company: "Dynata Philippines Inc.",
     mark: "DYN",
     role: "Survey Interviewer",
@@ -118,7 +118,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    period: "January 2024 â€” Present",
+    period: "January 2024 — Present",
     company: "Alex",
     mark: "AX",
     role: "Lead Generation Specialist",
@@ -132,7 +132,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    period: "October 2023 â€” December 2024",
+    period: "October 2023 — December 2024",
     company: "Choi Ka Wan",
     mark: "CKW",
     role: "Housekeeper / Home Tutor",
@@ -144,7 +144,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    period: "April 2017 â€” January 2023",
+    period: "April 2017 — January 2023",
     company: "Boardwalk City Residences Condominium Corp.",
     mark: "BCR",
     role: "Administrative Assistant / Receptionist",
@@ -158,7 +158,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    period: "March 2015 â€” July 2016",
+    period: "March 2015 — July 2016",
     company: "Cebu Greenmate Manpower Services",
     mark: "CGM",
     role: "HR Recruiter",
@@ -171,7 +171,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    period: "June 2011 â€” February 2015",
+    period: "June 2011 — February 2015",
     company: "Golden Arches Development Corporation",
     mark: "GAD",
     role: "Service Crew Member",
@@ -184,7 +184,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    period: "April 2010 â€” March 2011",
+    period: "April 2010 — March 2011",
     company: "CNT Lechon",
     mark: "CNT",
     role: "Food Service Handler",
@@ -231,10 +231,10 @@ const STRENGTHS = [
 ];
 
 const EDUCATION = [
-  { period: "June 2024 â€” June 2025", credential: "Bachelor of Science in Business Administration", detail: "Major in Human Resource Management", school: "New Era University", location: "Quezon City, Philippines" },
-  { period: "June 2017 â€” December 2017", credential: "Hotel and Restaurant Management", detail: "Basic Vocational in Hotel Management", school: "High Skill Technical Training Center Inc.", location: "Lapu-Lapu City" },
-  { period: "June 2014 â€” December 2014", credential: "Beauty Care / Cosmetology", detail: "Vocational in Health and Wellness", school: "", location: "Cebu City" },
-  { period: "January 2006 â€” March 2010", credential: "High School Diploma", detail: "", school: "Felipe F. Matbagon Memorial High School", location: "Caubian, Lapu-Lapu City" },
+  { period: "June 2024 — June 2025", credential: "Bachelor of Science in Business Administration", detail: "Major in Human Resource Management", school: "New Era University", location: "Quezon City, Philippines" },
+  { period: "June 2017 — December 2017", credential: "Hotel and Restaurant Management", detail: "Basic Vocational in Hotel Management", school: "High Skill Technical Training Center Inc.", location: "Lapu-Lapu City" },
+  { period: "June 2014 — December 2014", credential: "Beauty Care / Cosmetology", detail: "Vocational in Health and Wellness", school: "", location: "Cebu City" },
+  { period: "January 2006 — March 2010", credential: "High School Diploma", detail: "", school: "Felipe F. Matbagon Memorial High School", location: "Caubian, Lapu-Lapu City" },
 ];
 
 const ACHIEVEMENTS = [
@@ -351,12 +351,12 @@ function Hero() {
             <div className="hero-availability"><span className="status-dot" /> How I can support your team</div>
             <p className="mt-7 text-sm font-semibold uppercase text-muted-foreground">{PROFILE.title} <span className="text-primary">/ Cebu, PH</span></p>
             <h1 className="mt-3 max-w-4xl font-display text-6xl font-semibold leading-[1.04] text-foreground sm:text-7xl lg:text-8xl">
-              Hello, Iâ€™m<br /><span className="hero-name">Cherelyn</span><span className="text-primary">.</span>
+              Hello, I’m<br /><span className="hero-name">Cherelyn</span><span className="text-primary">.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">{PROFILE.summary}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#experience" className="hero-button hero-button-primary">Explore experience <ArrowDown className="h-4 w-4" /></a>
-              <a href="#contact" className="hero-button hero-button-secondary">Letâ€™s work together</a>
+              <a href="#contact" className="hero-button hero-button-secondary">Let’s work together</a>
             </div>
             <p className="mt-8 flex items-center gap-2 text-xs text-muted-foreground"><MapPin className="h-4 w-4 text-primary" />{PROFILE.location}</p>
           </Reveal>
@@ -367,7 +367,7 @@ function Hero() {
             <div className="profile-frame-heading"><span>Professional profile</span><span>Cebu, Philippines</span></div>
             <figure className="profile-figure">
             <img
-              src={`https://online-portfolio.github.io/cherelyn-agawin-online-portfolio/profile.jpg`}
+              src="/profile.jpg"
               alt="Cherelyn Agawin"
               width={900}
               height={1200}
@@ -417,8 +417,8 @@ function About() {
           <Reveal>
             <div className="quote-panel interactive-detail">
               <Quote className="h-6 w-6 text-primary/70" />
-              <blockquote className="mt-4 font-display text-2xl leading-snug text-foreground sm:text-3xl">â€œThere is a powerful driving force inside every human being that, once unleashed, can make any vision, dream, or desire a reality.â€</blockquote>
-              <cite className="mt-4 block text-sm not-italic text-muted-foreground">â€” Tony Robbins</cite>
+              <blockquote className="mt-4 font-display text-2xl leading-snug text-foreground sm:text-3xl">“There is a powerful driving force inside every human being that, once unleashed, can make any vision, dream, or desire a reality.”</blockquote>
+              <cite className="mt-4 block text-sm not-italic text-muted-foreground">— Tony Robbins</cite>
             </div>
           </Reveal>
           <Reveal className="space-y-6 text-base leading-8 text-muted-foreground">
@@ -634,9 +634,9 @@ function Contact() {
     <section id="contact" className="contact-zone scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
         <Reveal>
-          <div className="flex items-center gap-4 text-xs font-semibold uppercase tracking-[0.2em] text-primary"><span className="h-px w-12 bg-primary/60" />Administrative Assistant Â· Lapu-Lapu City</div>
+          <div className="flex items-center gap-4 text-xs font-semibold uppercase tracking-[0.2em] text-primary"><span className="h-px w-12 bg-primary/60" />Administrative Assistant · Lapu-Lapu City</div>
           <div className="mt-10 max-w-4xl">
-            <h2 className="font-display text-5xl font-semibold leading-[1.04] sm:text-6xl lg:text-7xl">Letâ€™s Work Together</h2>
+            <h2 className="font-display text-5xl font-semibold leading-[1.04] sm:text-6xl lg:text-7xl">Let’s Work Together</h2>
             <p className="mt-7 max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">Looking for dependable administrative support, lead generation assistance, customer service, recruitment support, or help keeping business information organized? I bring years of professional experience, attention to detail, and a service-focused approach to supporting teams and clients.</p>
             <p className="mt-8 flex items-center gap-2 text-sm text-muted-foreground"><MapPin className="h-4 w-4 text-primary" />{PROFILE.location}</p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -736,11 +736,11 @@ function Footer() {
       <div className="mx-auto grid max-w-7xl gap-5 px-5 text-xs sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center sm:px-8 lg:px-12">
         <div className="min-w-0">
           <p className="font-display text-lg font-semibold">{PROFILE.name}</p>
-          <p className="mt-1 text-muted-foreground">{PROFILE.title} Â· {PROFILE.location}</p>
+          <p className="mt-1 text-muted-foreground">{PROFILE.title} · {PROFILE.location}</p>
         </div>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-muted-foreground">
           <a href={MAILTO_URL} className="footer-email">{PROFILE.email}</a>
-          <span>Â© {new Date().getFullYear()} {PROFILE.name}</span>
+          <span>© {new Date().getFullYear()} {PROFILE.name}</span>
         </div>
       </div>
     </footer>
@@ -765,4 +765,3 @@ function Portfolio() {
     </div>
   );
 }
-
